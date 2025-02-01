@@ -53,11 +53,7 @@ jobs:
       - name: Build
         env:
           APP_BASE_PATH: /${{ github.repository }}
-        run: |
-          rm -rf node_modules pnpm-lock.yaml
-          pnpm store clear
-          pnpm install
-          pnpm run build
+        run: pnpm install && pnpm run build
 
       # 部署
       - name: Deploy
@@ -66,4 +62,4 @@ jobs:
           github_token: ${{ secrets.BLOG_TOKEN }}
           full_commit_message: Deploying to gh-pages from @ ${{ github.sha }} 🚀
           publish_branch: gh-pages
-          publish_dir: docs/.vitepress/dist
+          publish_dir: dist
