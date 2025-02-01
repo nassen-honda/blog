@@ -53,15 +53,16 @@ jobs:
       - name: Build
         env:
           APP_BASE_PATH: /${{ github.repository }}
-        run: pnpm install && pnpm run build
+        run: |
+          rm -rf node_modules pnpm-lock.yaml
+          pnpm install
+          pnpm run build
 
       # 部署
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.BLOG_TOKEN }}
           full_commit_message: Deploying to gh-pages from @ ${{ github.sha }} 🚀
-          # GitHub Pages 读取的分支
           publish_branch: gh-pages
-          # 静态文件所在目录
-          publish_dir: dist
+          publish_dir: docs/.vitepress/dist
