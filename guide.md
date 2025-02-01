@@ -8,7 +8,7 @@
 
 这里指前端导航页访问的初始页面。
 
-![首页](https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/home.webp)
+![首页](https://raw.githubusercontent.com/honda1996/picture/main/vitepress-nav-template/home.webp)
 
 ### 1.主体部分
 
@@ -18,14 +18,14 @@
 
 ```ts
 hero:
-  name: 茂茂的 //左侧第一行
+  name: Honda的 //左侧第一行
   text: 个人前端导航  //左侧第二行
   tagline: 使用 VitePress 打造个人前端导航  //第三行小注内容
   image:
     src: /logo.png //页面大图地址（图像最好切圆后使用）
-    alt: 茂茂物语
+    alt: Honda
   actions:  //跳转按钮，可按需增减
-    - text: 茂茂物语
+    - text: Honda
       link: https://notes.fe-mm.com
     - text: 前端导航
       link: /nav/
@@ -51,7 +51,7 @@ features:
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '个人主页', link: 'https://fe-mm.com' }, //切行无影响
   {
-    text: '茂茂物语', //显示文本
+    text: 'Honda', //显示文本
     link: 'https://notes.fe-mm.com', //链接
   },
 ]
@@ -64,11 +64,11 @@ export const nav: DefaultTheme.Config['nav'] = [
 ```ts
 export default defineConfig({
     ---
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }], //社交链接
+    socialLinks: [{ icon: 'github', link: 'https://github.com/nassen-honda/blog' }], //社交链接
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao'
+      copyright: 'Copyright © 2019-present honda'
     },  //页脚，可按Vue支持格式修改
 })
 ```
@@ -77,7 +77,7 @@ export default defineConfig({
 
 一般对应 `https://域名(ip)/nav/`
 
-![站点列表页](https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/nav.webp)
+![站点列表页](https://raw.githubusercontent.com/honda1996/picture/main/vitepress-nav-template/nav.webp)
 
 ### 1.站点列表数据
 
@@ -146,7 +146,7 @@ Nav 页本身属于 MD 文件渲染，因此除引用的 data 文件用于数据
 <br />
 
 ::: tip
-该导航由 [maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-nav-template>
+该导航由 [honda](https://github.com/honda1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/nassen-honda/blog>
 :::  //引用Notes提示块
 ```
 
