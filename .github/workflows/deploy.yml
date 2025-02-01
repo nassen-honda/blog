@@ -55,6 +55,7 @@ jobs:
           APP_BASE_PATH: /${{ github.repository }}
         run: |
           rm -rf node_modules pnpm-lock.yaml
+          pnpm store clear
           pnpm install
           pnpm run build
 
